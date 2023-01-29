@@ -1,13 +1,15 @@
 <template>
-    <div class="w-[24rem] bg-gray-200">
-        <div class="h-[3rem] w-full bg-gray-300 grid grid-cols-2 items-center px-4 text-default-text">
+    <div class="w-[24rem] bg-gray-200 rounded-full rounded-md">
+        <div class="h-[3rem] w-full bg-gray-300 grid grid-cols-2 items-center px-4 text-default-text rounded-t-md">
             <h1 class="text-3xl">{{ status }}</h1>
-            <button class="text-3xl justify-self-end hover:text-blue-900 hover:scale-125 ease-in-out duration-100" @click="newCard">+</button>
+            <button class="text-3xl justify-self-end hover:text-blue-900 hover:scale-125 ease-in-out duration-100"
+                    @click="newCard">+
+            </button>
         </div>
         <div class="w-full min-h-[45rem] flex flex-col p-4 gap-4">
-            <template v-for="card in cardStore.cards.filter(c => c.card.card_status === status)" :key="card.documentId">
-                <CardComponent :card="card" />
-            </template>
+            <CardComponent :card="card"
+                           v-for="card in cardStore.cards.filter(c => c.card.card_status === status)"
+                           :key="card.documentId" />
         </div>
     </div>
 </template>
@@ -28,7 +30,7 @@ const userStore = useUserStore();
 const cardStore = useCardStore();
 const boardNameStore = useBoardNameStore();
 
-const newStatus = ref()
+const newStatus = ref();
 
 const db = getFirestore();
 

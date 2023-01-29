@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-white h-52 p-2 grid grid-rows-5 gap-2 text-default-text">
-        <div class="order-1">
+    <div class="bg-white h-52 p-2 grid grid-rows-5 gap-2 text-default-text rounded-md shadow-sm hover:scale-105 ease-in-out duration-100">
+        <div class="order-1 flex flex-row">
             <input type="text"
                    class="text-2xl"
                    v-model="cardDocument.card.title"
                    @change="updateCard">
             <button @click="removeCard"
-                    class="text-3xl justify-self-end hover:text-blue-900 hover:scale-125 ease-in-out duration-100">-
+                    class="text-3xl place-self-end hover:text-blue-900 hover:scale-125 ease-in-out duration-100 text-center w-full">-
             </button>
         </div>
 

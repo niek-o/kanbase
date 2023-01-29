@@ -4,7 +4,7 @@
             <template v-for="status in cardStore.statuses">
                 <ColumnComponent :status="status" />
             </template>
-            <button class="text-3xl" @click="addStatus">+</button>
+            <button class="text-3xl self-start" @click="addStatus">+</button>
         </div>
     </div>
 </template>

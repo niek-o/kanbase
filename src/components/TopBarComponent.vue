@@ -7,7 +7,7 @@
             <h1 class="text-white">Signed in as {{ userStore.user.displayName }}</h1>
         </div>
 
-        <select v-model="boardNameStore.currentBoard" class="bg-blue-50 text-default-text">
+        <select v-model="boardNameStore.currentBoard" class="bg-blue-500 text-white w-32">
             <option v-for="board in boardNameStore.boards">
                 {{ board }}
             </option>
