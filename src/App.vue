@@ -7,6 +7,8 @@ const userStore = useUserStore();
 </script>
 
 <template>
-    <TopBarComponent v-if="userStore.user" />
-    <RouterView :class="{'h-[95vh]': userStore.user}" />
+    <div :class="{'dark': true}">
+        <TopBarComponent v-if="userStore.user" />
+        <RouterView />
+    </div>
 </template>

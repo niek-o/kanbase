@@ -1,6 +1,6 @@
 <template>
-    <div class="w-[24rem] bg-gray-200 rounded-full rounded-md">
-        <div class="h-[3rem] w-full bg-gray-300 grid grid-cols-2 items-center px-4 text-default-text rounded-t-md">
+    <div class="w-[24rem] rounded-full rounded-md bg-gray-200 dark:bg-dark-primary text-default-text dark:text-dark-text">
+        <div class="h-[3rem] w-full bg-gray-300 dark:bg-dark-secondary grid grid-cols-2 items-center px-4 rounded-t-md">
             <h1 class="text-3xl">{{ status }}</h1>
             <button class="text-3xl justify-self-end hover:text-blue-900 hover:scale-125 ease-in-out duration-100"
                     @click="newCard">+
