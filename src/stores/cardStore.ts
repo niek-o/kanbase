@@ -20,7 +20,7 @@ export const useCardStore = defineStore("CardStore", {
             if (userStore.user) {
 
                 const firebaseUser = await getDoc(doc(db, "users", userStore.user.uid));
-                
+
                 if (firebaseUser.exists()) {
                     const userdata = firebaseUser.data();
                     boardNameStore.boards = userdata.boards;

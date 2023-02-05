@@ -8,9 +8,9 @@
 const props = defineProps<{
     text: string,
     color: string
-}>()
+}>();
 
-const { color } = props
+const { color } = props;
 </script>
 
 <style scoped>

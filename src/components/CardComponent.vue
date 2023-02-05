@@ -14,13 +14,13 @@
         <textarea
                 class="order-2 row-span-2 text-md text-clip overflow-hidden resize-none bg-white dark:bg-dark-secondary text-default-text dark:text-dark-text"
                 v-model="cardDocument.card.description"
-                @change="updateCard"/>
+                @change="updateCard" />
 
         <div class="order-4 flex flex-row place-items-end gap-1 overflow-hidden">
             <TagChipComponent v-if="cardDocument.card.tags"
                               v-for="tag in cardDocument.card.tags"
                               :text="tag.name"
-                              :color="tag.color"/>
+                              :color="tag.color" />
         </div>
 
         <div class="order-5 flex place-items-end justify-between">
@@ -35,18 +35,18 @@
             </select>
             <AssigneeChipComponent
                     v-if="cardDocument.card.assignee"
-                    :assignee="cardDocument.card.assignee"/>
+                    :assignee="cardDocument.card.assignee" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import {deleteDoc, doc, getFirestore, updateDoc} from "firebase/firestore";
-import {ref} from "vue";
-import {useBoardNameStore} from "../stores/boardNameStore";
-import {useCardStore} from "../stores/cardStore";
-import {useUserStore} from "../stores/userStore";
-import type {CardType} from "../types/card";
+import { deleteDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
+import { ref } from "vue";
+import { useBoardNameStore } from "../stores/boardNameStore";
+import { useCardStore } from "../stores/cardStore";
+import { useUserStore } from "../stores/userStore";
+import type { CardType } from "../types/card";
 import AssigneeChipComponent from "./AssigneeChipComponent.vue";
 import TagChipComponent from "./TagChipComponent.vue";
 

@@ -8,11 +8,11 @@
         </div>
 
         <div class="flex-grow">
-        <select v-model="boardNameStore.currentBoard" class="w-32 p-2 rounded-md bg-blue-500 dark:bg-dark-primary">
-            <option v-for="board in boardNameStore.boards">
-                {{ board }}
-            </option>
-        </select>
+            <select v-model="boardNameStore.currentBoard" class="w-32 p-2 rounded-md bg-blue-500 dark:bg-dark-primary">
+                <option v-for="board in boardNameStore.boards">
+                    {{ board }}
+                </option>
+            </select>
         </div>
 
         <div class="flex-grow">
@@ -30,10 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import {useRouter} from "vue-router";
-import {useBoardNameStore} from "../stores/boardNameStore";
+import { useRouter } from "vue-router";
+import { useBoardNameStore } from "../stores/boardNameStore";
 import { useDarkModeStore } from "../stores/darkModeStore";
-import {useUserStore} from "../stores/userStore";
+import { useUserStore } from "../stores/userStore";
 
 const router = useRouter();
 const userStore = useUserStore();
