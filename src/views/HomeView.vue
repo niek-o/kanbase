@@ -3,7 +3,7 @@
         <template v-for="status in cardStore.statuses">
             <ColumnComponent :status="status" />
         </template>
-        <button class="text-3xl self-start" @click="addStatus">+</button>
+        <button class="text-3xl self-start text-default-text dark:text-dark-text" @click="addStatus">+</button>
     </div>
 </template>
 

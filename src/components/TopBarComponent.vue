@@ -3,7 +3,8 @@
         <div class="flex flex-row flex-grow h-full place-items-center gap-2">
             <img :src="userStore.user.photoURL"
                  class="w-auto h-full rounded-full border-[1.5px] border-text-default-text dark:border-text-dark-text"
-                 alt="DP">
+                 alt="DP"
+                 referrerpolicy="no-referrer">
             <h1>Signed in as {{ userStore.user.displayName }}</h1>
         </div>
 
@@ -15,7 +16,7 @@
             </select>
         </div>
 
-        <div class="flex-grow">
+        <div class="flex-grow mt-4">
             <label class="relative inline-flex items-center mb-5 cursor-pointer">
                 <input type="checkbox" v-model="darkModeStore.darkMode" class="sr-only peer">
                 <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-500 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-500" />
