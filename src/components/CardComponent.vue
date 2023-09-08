@@ -63,6 +63,16 @@ const boardNameStore = useBoardNameStore();
 
 const cardDocument = ref(props.card);
 
+// cardDocument.value.card.assignee = {
+//     profile_picture: userStore.user!.photoURL!,
+//     name: userStore.user!.displayName!
+// }
+//
+// cardDocument.value.card.tags = [{
+//     name: "Test",
+//     color: "#000000"
+// }]
+
 const db = getFirestore();
 
 function updateCard() {

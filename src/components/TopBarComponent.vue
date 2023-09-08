@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[5vh] flex place-items-center justify-between px-5 py-2 gap-2 bg-blue-500 dark:bg-dark-secondary text-white dark:text-dark-text">
+    <div class="h-[5vh] flex place-items-center justify-between px-5 py-2 gap-2 bg-blue-500 dark:bg-dark-secondary text-white dark:text-dark-text fixed w-screen">
         <div class="flex flex-row flex-grow h-full place-items-center gap-2">
             <img :src="userStore.user.photoURL"
                  class="w-auto h-full rounded-full border-[1.5px] border-text-default-text dark:border-text-dark-text"

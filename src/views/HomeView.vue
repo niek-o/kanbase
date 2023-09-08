@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full flex flex-row flex-wrap justify-start gap-12 p-10 dark:bg-dark-background">
+    <div class="w-full h-full flex flex-row flex-wrap justify-start gap-12 p-10 pt-16 dark:bg-dark-background">
         <template v-for="status in cardStore.statuses">
             <ColumnComponent :status="status" />
         </template>
