@@ -9,7 +9,10 @@
         <div class="w-full min-h-[45rem] flex flex-col p-4 gap-4">
             <CardComponent :card="card"
                            v-for="card in cardStore.cards.filter(c => c.card.card_status === status)"
-                           :key="card.documentId" />
+                           :key="card.documentId"
+                           draggable="true"
+                           @dragstart="this.$emit('drag-card', card)"
+            />
         </div>
     </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
-    <div class="h-52 p-2 grid grid-rows-5 gap-2 rounded-md shadow-sm hover:scale-105 ease-in-out duration-100 bg-white dark:bg-dark-secondary text-default-text dark:text-dark-text">
+    <div class="h-52 p-2 grid grid-rows-5 gap-2 rounded-md shadow-sm hover:scale-105 ease-in-out duration-100 bg-white dark:bg-dark-secondary text-default-text dark:text-dark-text"
+         @card-dragged="updateCard">
         <div class="order-1 flex flex-row">
             <input type="text"
                    class="text-2xl bg-white dark:bg-dark-secondary text-default-text dark:text-dark-text"
@@ -47,6 +48,7 @@ import { useBoardNameStore } from "../stores/boardNameStore";
 import { useCardStore } from "../stores/cardStore";
 import { useUserStore } from "../stores/userStore";
 import type { CardType } from "../types/card";
+import { updateCard } from "../utils/cardLogic";
 import AssigneeChipComponent from "./AssigneeChipComponent.vue";
 import TagChipComponent from "./TagChipComponent.vue";
 
@@ -75,12 +77,15 @@ const cardDocument = ref(props.card);
 
 const db = getFirestore();
 
-function updateCard() {
-    if (!userStore.user) {
-        return;
-    }
-    updateDoc(doc(db, `board_${userStore.user.uid}_${boardNameStore.currentBoard}`, props.card.documentId), cardDocument.value.card);
-}
+// function updateCard() {
+//     if (!userStore.user) {
+//         return;
+//     }
+//     updateDoc(doc(db, `board_${userStore.user.uid}_${boardNameStore.currentBoard}`, props.card.documentId), cardDocument.value.card);
+// }
+
+
+updateCard(props.card.documentId, props.card.card);
 
 function removeCard() {
     if (!userStore.user) {
